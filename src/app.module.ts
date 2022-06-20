@@ -15,7 +15,9 @@ import config from './config/config.service';
       load: [config],
       isGlobal: true,
     }),
-    TypeOrmModule.forRootAsync({ useClass: TypeOrmConfigService }),
+    TypeOrmModule.forRootAsync({
+      useClass: TypeOrmConfigService,
+    }),
     UsersModule,
     SessionsModule,
   ],
